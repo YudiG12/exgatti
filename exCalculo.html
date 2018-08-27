@@ -24,16 +24,28 @@
                 <li class="nav-item">
                     <a class="nav-link" href="exPecas.html">exPeças</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="exPecas.html">exCalculo</a>
-                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="exPecas.html">novo</a>
+                    <a class="nav-link" href="exCalculo.html">exCalculo</a>
                 </li>
                 </ul>
             </div>
         </nav>
 
+        <center>
+            <button style="margin-top:180px" class="button" type="button" id="btn" onclick="btn()">calcular</button>            
+            <p class="pa" id="parag">10 x 225 x 11527 =</p>
+        </center>
+
+        <script>
+            var executou = false;
+            function btn(){
+                if(executou == false){
+                    var resultado = 10*225*11527;
+                    document.getElementById("parag").innerHTML += resultado;
+                    executou = true;
+                }
+            }
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>
