@@ -34,18 +34,35 @@
             </div>
         </nav>
 
+        <div class="container" style="width:30%;">
+            <center>
+                <div class="form-group" style="margin-top:100px">
+                    <input class="form-control" id="n1" name="" type="text" placeholder="Número 1">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="n2" name="" type="text" placeholder="Número 2">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="n3" name="" type="text" placeholder="Número 3">
+                </div>
+                <button style="margin-top:30px; margin-bottom:0;" class="button" type="button" id="btn" onclick="btn()">multiplicar</button>  
+            </center>
+        </div>
         <center>
-            <button style="margin-top:180px" class="button" type="button" id="btn" onclick="btn()">calcular</button>            
-            <p class="pa" id="parag">10 x 225 x 11527 =</p>
+            <p class="pa" id="parag"></p>                  
         </center>
-
+        
         <script>
-            var executou = false;
             function btn(){
-                if(executou == false){
-                    var resultado = 10*225*11527;
-                    document.getElementById("parag").innerHTML += resultado;
-                    executou = true;
+                var n1 = document.getElementById("n1").value;
+                var n2 = document.getElementById("n2").value;
+                var n3 = document.getElementById("n3").value;
+                if(!isNaN(n1) && !isNaN(n2) && !isNaN(n3)){
+                    var resultado = n1*n2*n3;
+                    document.getElementById("parag").innerHTML = n1+" X "+n2+" X "+n3+" = "+resultado;
+                }
+                else{
+                    document.getElementById("parag").innerHTML = "Insira apenas números"
                 }
             }
         </script>
