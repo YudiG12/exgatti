@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>exPecas</title>
+        <title>exIdadeSexo</title>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -21,49 +21,41 @@
                 <li class="nav-item">
                     <a class="nav-link" href="exIdade.html">exIdade</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exPecas.html">exPeças</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exCalculo.html">exCalculo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exSoma.html">exSoma</a>
+                </li>
                 <li class="nav-item active">
-                        <a class="nav-link" href="exPecas.html">exPeças</a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="exCalculo.html">exCalculo</a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="exSoma.html">exSoma</a>
-                </li>
-                <li class="nav-item">
                         <a class="nav-link" href="exIdadeSexo.html">exIdadeSexo</a>
                 </li>
                 </ul>
             </div>
         </nav>
+        <div class="container">
             <center>
-                <button style="margin-top:180px" class="button" type="button" id="btn" onclick="btn()">butaozin</button>            
-                <p class="pa" id="parag">clica aííí</p>
+                <button type="button" class="button" onclick="btn()">clica</button>
+                <p class="pa"id="parag">clique</p>
             </center>
+        </div>
         <script>
-        
             function btn() {
-                var codPeca = prompt("Qual o código da peça?");
-                if(isNaN(codPeca) || codPeca == "" || codPeca == null) {
-                    document.getElementById("parag").innerHTML = "Isso aí n é um número parça";                    
-                    end;
-                }
-                var valorPeca = prompt("Qual o valor da peça?");
-                if(isNaN(valorPeca) || valorPeca == "" || valorPeca == null) {
-                    document.getElementById("parag").innerHTML = "Isso aí n é um número parça";                    
-                    end;
-                }
-                var qtdPecas = prompt("Quantas peças?");
-                if(isNaN(qtdPecas) || qtdPecas == "" || qtdPecas == null) {
-                    document.getElementById("parag").innerHTML = "Isso aí n é um número parça";                    
-                    end;
-                }
-                var total = valorPeca*qtdPecas;
-                document.getElementById("parag").innerHTML = "Código: "+codPeca+"\nValor total: R$"+total;
+                var idade = prompt("Qual sua idade?");
+                var sexo = prompt("Qual seu sexo? \nMasculino: m   Feminino: f");
+                if(sexo == "m" && idade >= 18)
+                    document.getElementById("parag").innerHTML = "Você é um homem maior de idade";
+                if(sexo == "m" && idade < 18)
+                    document.getElementById("parag").innerHTML = "Você é um homem menor de idade";
+                if(sexo == "f" && idade >= 18) 
+                    document.getElementById("parag").innerHTML = "Você é uma mulher maior de idade";
+                if(sexo == "f" && idade < 18)
+                    document.getElementById("parag").innerHTML = "Você é uma mulher menor de idade";    
             }
-
         </script>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>
