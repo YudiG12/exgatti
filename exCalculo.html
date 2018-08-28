@@ -58,6 +58,12 @@
                 var n2 = document.getElementById("n2").value;
                 var n3 = document.getElementById("n3").value;
                 if(!isNaN(n1) && !isNaN(n2) && !isNaN(n3)){
+                    if(n1==null || n1=="")
+                        n1=0;
+                    if(n2==null || n2=="")
+                        n2=0;
+                    if(n3==null || n3=="")
+                        n3=0;
                     var resultado = n1*n2*n3;
                     document.getElementById("parag").innerHTML = n1+" X "+n2+" X "+n3+" = "+resultado;
                 }
